@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
@@ -9,8 +10,8 @@ int main()
 
 	//Le informa a GLFW que version de OpenGL se está usando
 	//En este caso la versión es OpenGL 3.3
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
 	//Le informa a GLFW que se esta usando el núcleo o (CORE profile)
 	//Solo tenemos funciones modernas
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -31,6 +32,9 @@ int main()
 	//Carga GLAD para que se configure OpenGL
 	gladLoadGL();
 
+	std::cout << "OpenGL version: "
+		<< glGetString(GL_VERSION)
+		<< std::endl;
 	//Especifica la ventana gráfica de OpenGl en la ventana
 	//En este caso, la ventana gráfica va desde x=0, y=0; hasta x=800, y=800
 	glViewport(0, 0, 800, 800);

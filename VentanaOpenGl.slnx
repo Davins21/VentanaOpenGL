@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="VentanaOpenGl.vcxproj" />
+  <Project Path="VentanaOpenGl.vcxproj" Id="d5e1fa39-8af5-4c3a-ad3b-37bb300af6ee" />
 </Solution>
