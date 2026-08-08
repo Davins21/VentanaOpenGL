@@ -10,12 +10,12 @@
 //Coordenadas de los vertices
 GLfloat vertices[] =
 { //				COORDINADAS					  /			COLORES		//	
-	-0.5f,	-0.5f *  float(sqrt(3)) / 3,	0.0f,	0.0f, 1.0f, 0.0f,	// Esquina inferior Izquierda
-	0.5f,	-0.5f *  float(sqrt(3)) / 3,	0.0f,	0.0f, 0.7f, 0.0f,  // Esquina inferior Derecha
-	0.0f,	0.5f  *  float(sqrt(3)) * 2 / 3,0.0f,	0.0f, 0.4f, 0.0f,	// Esquina Superior
-	-0.25f, 0.5f  *  float(sqrt(3)) / 6,	0.0f,	0.0f, 1.0f, 0.0f, // Interior izquierdo
-	0.25f,	0.5f  *  float(sqrt(3)) / 6,	0.0f,	0.0f, 0.4f, 0.0f,	// Interior Derecho
-	0.0f,	-0.5f *  float(sqrt(3)) / 3,	0.0f,	0.0f, 0.8f,	0.0f	// Interior hacia abajo
+	-0.5f,	-0.5f * float(sqrt(3)) / 3,	0.0f,	0.0f, 1.0f, 0.0f,	// Esquina inferior Izquierda
+	0.5f,	-0.5f * float(sqrt(3)) / 3,	0.0f,	0.0f, 0.7f, 0.0f,  // Esquina inferior Derecha
+	0.0f,	0.5f * float(sqrt(3)) * 2 / 3,0.0f,	0.0f, 0.4f, 0.0f,	// Esquina Superior
+	-0.25f, 0.5f * float(sqrt(3)) / 6,	0.0f,	0.0f, 1.0f, 0.0f, // Interior izquierdo
+	0.25f,	0.5f * float(sqrt(3)) / 6,	0.0f,	0.0f, 0.4f, 0.0f,	// Interior Derecho
+	0.0f,	-0.5f * float(sqrt(3)) / 3,	0.0f,	0.0f, 0.8f,	0.0f	// Interior hacia abajo
 };
 
 GLuint indices[] =
@@ -65,19 +65,22 @@ int main()
 	VBO VBO1(vertices, sizeof(vertices));
 	EBO EBO1(indices, sizeof(indices));
 
-	VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0);
+	VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6* sizeof(float), (void*)0);
 	VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 	VAO1.Unbind();
 	VBO1.Unbind();
 	EBO1.Unbind();
 
+	GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
+
 	//Bucle Principal
-	while (!glfwWindowShouldClose(window)) 
+	while (!glfwWindowShouldClose(window))
 	{
 		glClearColor(119.0f / 255.0f, 221.0f / 255.0f, 119.0f / 255.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		// Le cuenta a OpenGL que shaderProgram quiero usar
 		shaderProgram.Activate();
+		glUniform1f(uniID, 0.5f);
 		VAO1.Bind();
 		// Dibuja el triangulo	
 		glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
