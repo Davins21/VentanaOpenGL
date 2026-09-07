@@ -1,7 +1,9 @@
 #include<iostream>
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
-
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include"ShaderClass.h"
 #include"VAO.h"
 #include"VBO.h"
@@ -14,57 +16,77 @@ GLfloat vertices[] =
 	// Base del sombrerito (Color Rojo)
 	-0.6f, -0.1f, 0.0f, 0.9f, 0.1f, 0.1f ,
 	 0.6f, -0.1f, 0.0f, 0.9f, 0.1f, 0.1f ,
-	 0.6f,  0.2f, 0.0f, 0.9f, 0.1f, 0.1f ,
-	-0.6f,  0.2f, 0.0f, 0.9f, 0.1f, 0.1f ,
+	 0.6f,  0.3f, 0.0f, 0.9f, 0.1f, 0.1f ,
+	-0.6f,  0.3f, 0.0f, 0.9f, 0.1f, 0.1f ,
 
 	// Parte superior del sombrero (Color Rojo)
-	-0.4f,  0.2f, 0.0f, 0.9f, 0.1f, 0.1f ,
-	 0.4f,  0.2f, 0.0f, 0.9f, 0.1f, 0.1f ,
+	-0.4f,  0.3f, 0.0f, 0.9f, 0.1f, 0.1f ,
+	 0.4f,  0.3f, 0.0f, 0.9f, 0.1f, 0.1f ,
 	 0.4f,  0.6f, 0.0f, 0.9f, 0.1f, 0.1f ,
 	-0.4f,  0.6f, 0.0f, 0.9f, 0.1f, 0.1f ,
 
-	// Mancha color blanca central
-	-0.2f,  0.1f, 0.0f,  1.0f, 1.0f, 1.0f,
-	 0.2f,  0.1f, 0.0f,  1.0f, 1.0f, 1.0f,
-	 0.2f,  0.5f, 0.0f,  1.0f, 1.0f, 1.0f,
-	-0.2f,  0.5f, 0.0f,  1.0f, 1.0f, 1.0f,
+	// 8 a 19: MANCHAS BLANCAS FRONTALES (Z = +0.002f)
+	// Mancha Central Frente
+	-0.2f,  0.1f, 0.002f,  1.0f, 1.0f, 1.0f,
+	 0.2f,  0.1f, 0.002f,  1.0f, 1.0f, 1.0f,
+	 0.2f,  0.5f, 0.002f,  1.0f, 1.0f, 1.0f,
+	-0.2f,  0.5f, 0.002f,  1.0f, 1.0f, 1.0f,
 
-	// Mancha color blanca izquierda
-	-0.6f,  0.0f, 0.0f,  1.0f, 1.0f, 1.0f,
-	-0.4f,  0.0f, 0.0f,  1.0f, 1.0f, 1.0f,
-	-0.4f,  0.3f, 0.0f,  1.0f, 1.0f, 1.0f,
-	-0.6f,  0.3f, 0.0f,  1.0f, 1.0f, 1.0f,
+	// Mancha Izquierda Frente
+	-0.6f,  0.0f, 0.002f,  1.0f, 1.0f, 1.0f,
+	-0.4f,  0.0f, 0.002f,  1.0f, 1.0f, 1.0f,
+	-0.4f,  0.3f, 0.002f,  1.0f, 1.0f, 1.0f,
+	-0.6f,  0.3f, 0.002f,  1.0f, 1.0f, 1.0f,
 
-	// Mancha color blanca derecha
-	 0.4f,  0.0f, 0.0f,  1.0f, 1.0f, 1.0f,
-	 0.6f,  0.0f, 0.0f,  1.0f, 1.0f, 1.0f,
-	 0.6f,  0.3f, 0.0f,  1.0f, 1.0f, 1.0f,
-	 0.4f,  0.3f, 0.0f,  1.0f, 1.0f, 1.0f,
+	// Mancha Derecha Frente
+	 0.4f,  0.0f, 0.002f,  1.0f, 1.0f, 1.0f,
+	 0.6f,  0.0f, 0.002f,  1.0f, 1.0f, 1.0f,
+	 0.6f,  0.3f, 0.002f,  1.0f, 1.0f, 1.0f,
+	 0.4f,  0.3f, 0.002f,  1.0f, 1.0f, 1.0f,
 
-	 //  BASE / TALLO (Color Piel)
-	 -0.4f, -0.6f, 0.0f,  1.0f, 0.8f, 0.6f,
-	  0.4f, -0.6f, 0.0f,  1.0f, 0.8f, 0.6f,
-	  0.4f, -0.1f, 0.0f,  1.0f, 0.8f, 0.6f,
-	 -0.4f, -0.1f, 0.0f,  1.0f, 0.8f, 0.6f,
+	 // MANCHAS BLANCAS TRASERAS (Z = -0.002f)
+	 // Mancha Central Atrás
+	 -0.2f,  0.1f, -0.002f,  1.0f, 1.0f, 1.0f,
+	  0.2f,  0.1f, -0.002f,  1.0f, 1.0f, 1.0f,
+	  0.2f,  0.5f, -0.002f,  1.0f, 1.0f, 1.0f,
+	 -0.2f,  0.5f, -0.002f,  1.0f, 1.0f, 1.0f,
 
-	 // OJOS (Color Negro)
-	 // Ojo Izquierdo
-	 -0.25f, -0.45f, 0.0f, 0.0f, 0.0f, 0.0f,
-	 -0.15f, -0.45f, 0.0f, 0.0f, 0.0f, 0.0f,
-	 -0.15f, -0.20f, 0.0f, 0.0f, 0.0f, 0.0f,
-	 -0.25f, -0.20f, 0.0f, 0.0f, 0.0f, 0.0f,
+	 // Mancha Izquierda Atrás
+	 -0.6f,  0.0f, -0.002f,  1.0f, 1.0f, 1.0f,
+	 -0.4f,  0.0f, -0.002f,  1.0f, 1.0f, 1.0f,
+	 -0.4f,  0.3f, -0.002f,  1.0f, 1.0f, 1.0f,
+	 -0.6f,  0.3f, -0.002f,  1.0f, 1.0f, 1.0f,
 
-	 // Ojo Derecho
-	  0.15f, -0.45f, 0.0f, 0.0f, 0.0f, 0.0f,
-	  0.25f, -0.45f, 0.0f, 0.0f, 0.0f, 0.0f,
-	  0.25f, -0.20f, 0.0f, 0.0f, 0.0f, 0.0f,
-	  0.15f, -0.20f, 0.0f, 0.0f, 0.0f, 0.0f,
+	 // Mancha Derecha Atrás
+	  0.4f,  0.0f, -0.002f,  1.0f, 1.0f, 1.0f,
+	  0.6f,  0.0f, -0.002f,  1.0f, 1.0f, 1.0f,
+	  0.6f,  0.3f, -0.002f,  1.0f, 1.0f, 1.0f,
+	  0.4f,  0.3f, -0.002f,  1.0f, 1.0f, 1.0f,
+
+	  //  BASE / TALLO (Color Piel)
+	  -0.4f, -0.6f, 0.0f,  1.0f, 0.8f, 0.6f,
+	   0.4f, -0.6f, 0.0f,  1.0f, 0.8f, 0.6f,
+	   0.4f, -0.1f, 0.0f,  1.0f, 0.8f, 0.6f,
+	  -0.4f, -0.1f, 0.0f,  1.0f, 0.8f, 0.6f,
+
+	  // OJOS (Color Negro)
+	  // Ojo Izquierdo
+	  -0.25f, -0.45f, -0.005f, 0.0f, 0.0f, 0.0f,
+	  -0.15f, -0.45f, -0.005f, 0.0f, 0.0f, 0.0f,
+	  -0.15f, -0.20f, -0.005f, 0.0f, 0.0f, 0.0f,
+	  -0.25f, -0.20f, -0.005f, 0.0f, 0.0f, 0.0f,
+
+	  // Ojo Derecho
+	  0.15f, -0.45f, -0.005f, 0.0f, 0.0f, 0.0f,
+	  0.25f, -0.45f, -0.005f, 0.0f, 0.0f, 0.0f,
+	  0.25f, -0.20f, -0.005f, 0.0f, 0.0f, 0.0f,
+	  0.15f, -0.20f, -0.005f, 0.0f, 0.0f, 0.0f,
 
 	  // BORDE COLORNEGRO INFERIOR
-	  -0.4f, -0.7f, 0.0f,  0.0f, 0.0f, 0.0f,
-	   0.4f, -0.7f, 0.0f,  0.0f, 0.0f, 0.0f,
-	   0.4f, -0.6f, 0.0f,  0.0f, 0.0f, 0.0f,
-	  -0.4f, -0.6f, 0.0f,  0.0f, 0.0f, 0.0f
+	  -0.4f, -0.7f, 0.002f,  0.0f, 0.0f, 0.0f,
+	   0.4f, -0.7f, 0.002f,  0.0f, 0.0f, 0.0f,
+	   0.4f, -0.6f, 0.002f,  0.0f, 0.0f, 0.0f,
+	  -0.4f, -0.6f, 0.002f,  0.0f, 0.0f, 0.0f
 };
 
 // Definir rectángulos divididos en 2 triángulos aplicando índices que se guardan en EBO
@@ -79,15 +101,20 @@ GLuint indices[] =
 	12, 13, 14,   14, 15, 12,
 	16, 17, 18,   18, 19, 16,
 
-	// Tallo
+	// Manchas blancas TRASERAS
 	20, 21, 22,   22, 23, 20,
-
-	// Ojos
 	24, 25, 26,   26, 27, 24,
 	28, 29, 30,   30, 31, 28,
 
-	// Borde inferior
-	32, 33, 34,   34, 35, 32
+	// Tallo 
+	32, 33, 34,   34, 35, 32,
+
+	// Ojos 
+	36, 37, 38,   38, 39, 36,   // Ojo Izquierdo
+	40, 41, 42,   42, 43, 40,   // Ojo Derecho
+
+	// Borde inferior 
+	44, 45, 46,   46, 47, 44
 };
 
 int main()
@@ -113,6 +140,16 @@ int main()
 	glfwMakeContextCurrent(window);
 	// Carga GLAD para que se configure OpenGL
 	gladLoadGL();
+
+	// Antes del bucle while (después de gladLoadGL):
+	glEnable(GL_DEPTH_TEST);
+	glDepthFunc(GL_LESS);
+
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	// Dentro del bucle while (en cada fotograma):
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Limpia tanto color como profundidad
+
 	// Especifica la ventana gráfica de OpenGl en la ventana
 	// En este caso, la ventana gráfica va desde x=0, y=0; hasta x=800, y=800
 	glViewport(0, 0, 800, 800);
@@ -141,21 +178,66 @@ int main()
 	VBO1.Unbind();
 	EBO1.Unbind();
 
-	GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
+	GLint mvpLoc = glGetUniformLocation(shaderProgram.ID, "uMVP");
+	GLint tintLoc = glGetUniformLocation(shaderProgram.ID, "uColorTint");
+
+	// Definición de los hongos, mediante una estructura de datos
+	struct Hongo {
+		glm::vec3 pos;
+		float escala;
+		glm::vec3 colorSombrero;
+		float alpha;
+	};
+
+	Hongo hongos[] = {
+		{ glm::vec3(0.0f, 0.0f,  0.0f), 0.6f, glm::vec3(0.0f, 0.4f, 1.0f), 1.0f }, // Azul
+		{ glm::vec3(0.0f, 0.0f, -0.6f), 0.8f, glm::vec3(0.0f, 1.0f, 0.0f), 0.9f }, // Verde
+		{ glm::vec3(0.0f, 0.0f, -1.2f), 1.0f, glm::vec3(1.0f, 1.0f, 1.0f), 0.9f }  // Rojo (Original)
+	};
+
+	GLsizei totalIndices = sizeof(indices) / sizeof(GLuint);
 
 	while (!glfwWindowShouldClose(window))
 	{
 		// Fondo gris
 		glClearColor(0.2f, 0.2f, 0.25f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		shaderProgram.Activate();
-		// Para ajustar la escala en general
-		glUniform1f(uniID, 0.1f);
-
 		VAO1.Bind();
-		// Dibujar los 54 índices (18 triángulos que forman los rectángulos)
-		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
+		//Configuración Cámara y Poryección
+		int width, height;
+		glfwGetFramebufferSize(window, &width, &height);
+		float aspect = (height > 0) ? (float)width / (float)height : 1.0f;
+
+		// Proyección en perspectiva (FOV de 60 grados como en la foto)
+		glm::mat4 projection = glm::perspective(glm::radians(60.0f), aspect, 0.1f, 100.0f);
+		// Vista de la cámara colocada en (0, 0, 3) mirando al origen (0, 0, 0)
+		glm::mat4 view = glm::lookAt(
+			glm::vec3(0.0f, 0.0f, 3.0f),  // Posición de la cámara
+			glm::vec3(0.0f, 0.0f, 0.0f),  // Hacia dónde mira
+			glm::vec3(0.0f, 1.0f, 0.0f)   // Vector hacia arriba
+		);
+
+		// Matriz de rotación común (todos giran juntos al mismo tiempo en el eje Y)
+		float t = (float)glfwGetTime();
+		glm::mat4 globalRotation = glm::rotate(glm::mat4(1.0f), t * glm::radians(30.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+		// Bucle de renderizado
+		for (const auto& h : hongos)
+		{
+			glm::mat4 model = glm::scale(glm::translate(globalRotation, h.pos), glm::vec3(h.escala));
+			glm::mat4 mvp = projection * view * model;
+			glUniformMatrix4fv(mvpLoc, 1, GL_FALSE, glm::value_ptr(mvp));
+
+			// A) Sombrero
+			glUniform4f(tintLoc, h.colorSombrero.r, h.colorSombrero.g, h.colorSombrero.b, h.alpha);
+			glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, (void*)0);
+
+			// B) Resto del Cuerpo
+			glUniform4f(tintLoc, 1.0f, 1.0f, 1.0f, h.alpha);
+			glDrawElements(GL_TRIANGLES, totalIndices - 12, GL_UNSIGNED_INT, (void*)(12 * sizeof(GLuint)));
+		}
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

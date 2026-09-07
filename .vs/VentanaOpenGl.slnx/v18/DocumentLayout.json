@@ -7,32 +7,24 @@
       "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\shaderClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:shaderClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\shaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:shaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:default.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:default.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:default.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\shaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:shaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:VBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -49,6 +41,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\shaderClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D5E1FA39-8AF5-4C3A-AD3B-37BB300AF6EE}|VentanaOpenGl.vcxproj|solutionrelative:shaderClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -68,27 +68,26 @@
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAAAK0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-02-21T00:06:06.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "shaderClass.cpp",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\shaderClass.cpp",
               "RelativeDocumentMoniker": "shaderClass.cpp",
               "ToolTip": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\shaderClass.cpp",
               "RelativeToolTip": "shaderClass.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAE8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-07T02:51:46.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T02:51:46.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "VBO.cpp",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VBO.cpp",
               "RelativeDocumentMoniker": "VBO.cpp",
@@ -101,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "shaderClass.h",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\shaderClass.h",
               "RelativeDocumentMoniker": "shaderClass.h",
@@ -109,12 +108,11 @@
               "RelativeToolTip": "shaderClass.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-07T02:46:51.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T02:46:51.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "VAO.cpp",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VAO.cpp",
               "RelativeDocumentMoniker": "VAO.cpp",
@@ -122,12 +120,11 @@
               "RelativeToolTip": "VAO.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-07T04:35:11.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T04:35:11.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "glad.c",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\glad.c",
               "RelativeDocumentMoniker": "glad.c",
@@ -135,12 +132,11 @@
               "RelativeToolTip": "glad.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-03-28T03:27:47.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T03:27:47.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "EBO.cpp",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\EBO.cpp",
               "RelativeDocumentMoniker": "EBO.cpp",
@@ -148,12 +144,11 @@
               "RelativeToolTip": "EBO.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-07T03:12:56.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T03:12:56.586Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "EBO.h",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\EBO.h",
               "RelativeDocumentMoniker": "EBO.h",
@@ -161,12 +156,11 @@
               "RelativeToolTip": "EBO.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-07T03:11:59.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T03:11:59.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "VAO.h",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\VAO.h",
               "RelativeDocumentMoniker": "VAO.h",
@@ -174,31 +168,30 @@
               "RelativeToolTip": "VAO.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-07T03:15:09.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T03:15:09.942Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "default.vert",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\default.vert",
               "RelativeDocumentMoniker": "default.vert",
               "ToolTip": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\default.vert",
               "RelativeToolTip": "default.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-07T02:43:51.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "default.frag",
               "DocumentMoniker": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\default.frag",
               "RelativeDocumentMoniker": "default.frag",
               "ToolTip": "D:\\Documents\\Proyectos OpenGL\\VentanaOpenGl\\default.frag",
               "RelativeToolTip": "default.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-07T02:45:06.667Z",
               "EditorCaption": ""
@@ -213,8 +206,7 @@
               "RelativeToolTip": "VBO.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-07T03:03:40.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T03:03:40.789Z"
             }
           ]
         }
