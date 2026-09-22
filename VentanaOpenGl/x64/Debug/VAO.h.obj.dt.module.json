@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "VentanaOpenGl\\x64\\Debug\\VAO.obj",
+            "outputs": [
+                "VentanaOpenGl\\x64\\Debug\\VAO.h.obj.dt.module.json",
+                "VentanaOpenGl\\x64\\Debug\\VAO.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\proyectos opengl\\ventanaopengl\\vbo.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "d:\\documents\\proyectos opengl\\ventanaopengl\\vbo.h",
+            "d:\\documents\\proyectos opengl\\ventanaopengl\\libraries\\include\\glad\\glad.h",
+            "d:\\documents\\proyectos opengl\\ventanaopengl\\libraries\\include\\khr\\khrplatform.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
